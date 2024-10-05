@@ -1,10 +1,15 @@
 {
-    "framework": "angular",
-    "outputDirectory": "dist/myfs/index.html",
-    "routes": [
+  "public": true,
+  "rewrites": [
+    {
+      "source": "/api",
+      "destination": "/(.*)"
+    }
+  ],
+  "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "https://ocrf9nzqde.execute-api.us-east-1.amazonaws.com/prod/cognito/api/v1/$1"
+      "dest": "https://ocrf9nzqde.execute-api.us-east-1.amazonaws.com/prod/cognito/api/v1"
     },
     {
       "src": "/(.*)",
