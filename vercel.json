@@ -1,9 +1,13 @@
 {
-    "rewrites": [
-      {
-        "source": "/api/:path*",
-        "destination": "https://ocrf9nzqde.execute-api.us-east-1.amazonaws.com/prod:path*"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://ocrf9nzqde.execute-api.us-east-1.amazonaws.com/prod/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
