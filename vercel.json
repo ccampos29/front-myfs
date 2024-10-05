@@ -1,0 +1,14 @@
+{
+    "framework": "angular",
+    "outputDirectory": "dist",
+    "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://ocrf9nzqde.execute-api.us-east-1.amazonaws.com/prod/cognito/api/v1/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
