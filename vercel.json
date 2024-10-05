@@ -3,10 +3,14 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "https://ocrf9nzqde.execute-api.us-east-1.amazonaws.com/prod/$1"
+      "dest": "https://ocrf9nzqde.execute-api.us-east-1.amazonaws.com/prod/cognito/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "^/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": ".*",
       "dest": "/index.html"
     }
   ]
