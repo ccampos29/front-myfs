@@ -1,6 +1,6 @@
 {
     "framework": "angular",
-    "outputDirectory": "dist/my",
+    "outputDirectory": "dist/myfs",
     "routes": [
     {
       "src": "/api/(.*)",
